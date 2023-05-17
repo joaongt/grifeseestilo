@@ -9,8 +9,15 @@
 </head>
 <body>
 
-    {{!-- Cabeçalho --}}
-    <header>
+    <div class="barra-inicial fundo-secundario">
+        <div class="barra-inicial-container">
+            <p class="slogan">Nós somos a Grifes &amp; Estilo. Uma loja completa.</p>
+        </div>
+    </div>
+
+    <div class="conteiner-principal">
+        {{!-- Cabeçalho --}}
+    <header id="cabecalho">
 
         {{!-- Cabeçalho para dispositivos mobile --}}
         <div class="cabecalho-mobile">
@@ -23,7 +30,7 @@
                 <div class="span3">
                     <div class="logo-secundaria">
                         <a href="/" title="Grifes & Estilo">
-                            <img src="/public/images/Logo - Puro.png" alt="Grifes & Estilo">
+                            <img src="/images/logo.png" alt="Grifes & Estilo">
                         </a>
                     </div>
                 </div>
@@ -44,6 +51,7 @@
         </div>
 
     </header>
+    </div>
 
     {{!-- Para cobrir o plano de fundo --}}
     <div class="overlays"></div>

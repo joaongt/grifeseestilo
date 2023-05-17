@@ -1,12 +1,21 @@
-import express from "express"
+const express = require("express")
+const exphbs = require("express-handlebars")
 
 const app = express()
 app.use(express.json())
+app.use(express.static('public'));
 
-app.engine('hbs', exphbs.engine({defaultLayout: 'structure'}));
-app.set('view engine', 'hbs');
+app.engine('handlebars', exphbs.engine({defaultLayout: 'structure'}));
+app.set('view engine', 'handlebars');
 
 PORT = 3200
+
+app.get("/", (req, res) => {
+    res.render('pages/home',{
+        titulo: "Grifes & Estilo",
+        estilo: "structure.css"
+    })
+})
 
 const server = app.listen(PORT, () => {
     console.log(`App is listening on port ${PORT}`);
